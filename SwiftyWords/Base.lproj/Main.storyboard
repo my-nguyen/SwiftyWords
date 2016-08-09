@@ -161,14 +161,14 @@
                                 <rect key="frame" x="425" y="390" width="75" height="44"/>
                                 <state key="normal" title="SUBMIT"/>
                                 <connections>
-                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbA-mM-hu8"/>
+                                    <action selector="submitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="poy-oU-F2f"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-9v-rUd">
                                 <rect key="frame" x="525" y="390" width="75" height="44"/>
                                 <state key="normal" title="CLEAR"/>
                                 <connections>
-                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYO-iG-4mg"/>
+                                    <action selector="clearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TRg-Ko-P9O"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tap letters to guess" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGh-En-f2M">
@@ -199,10 +199,10 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="answers" destination="Jna-5T-7rR" id="Exz-rC-oya"/>
-                        <outlet property="clues" destination="Ac7-L0-98b" id="Lsz-5L-aTO"/>
+                        <outlet property="answersLabel" destination="Jna-5T-7rR" id="fCe-3K-uDD"/>
+                        <outlet property="cluesLabel" destination="Ac7-L0-98b" id="gcf-fC-PmF"/>
                         <outlet property="currentAnswer" destination="eGh-En-f2M" id="scm-dX-RcL"/>
-                        <outlet property="score" destination="MfE-sQ-aFy" id="yrN-O5-PDh"/>
+                        <outlet property="scoreLabel" destination="MfE-sQ-aFy" id="zP4-PA-4s6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

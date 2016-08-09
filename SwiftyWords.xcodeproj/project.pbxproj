@@ -12,6 +12,7 @@
 		0F4EDEC61D58FF54001F261B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EDEC41D58FF54001F261B /* Main.storyboard */; };
 		0F4EDEC81D58FF54001F261B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EDEC71D58FF54001F261B /* Assets.xcassets */; };
 		0F4EDECB1D58FF54001F261B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EDEC91D58FF54001F261B /* LaunchScreen.storyboard */; };
+		0FD4E8191D593E6F00684E50 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FD4E8181D593E6F00684E50 /* level1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0F4EDEC71D58FF54001F261B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F4EDECA1D58FF54001F261B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F4EDECC1D58FF54001F261B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FD4E8181D593E6F00684E50 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		0F4EDEBF1D58FF54001F261B /* SwiftyWords */ = {
 			isa = PBXGroup;
 			children = (
+				0FD4E8181D593E6F00684E50 /* level1.txt */,
 				0F4EDEC01D58FF54001F261B /* AppDelegate.swift */,
 				0F4EDEC21D58FF54001F261B /* ViewController.swift */,
 				0F4EDEC41D58FF54001F261B /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F4EDECB1D58FF54001F261B /* LaunchScreen.storyboard in Resources */,
+				0FD4E8191D593E6F00684E50 /* level1.txt in Resources */,
 				0F4EDEC81D58FF54001F261B /* Assets.xcassets in Resources */,
 				0F4EDEC61D58FF54001F261B /* Main.storyboard in Resources */,
 			);
@@ -288,6 +292,7 @@
 				0F4EDED11D58FF54001F261B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
