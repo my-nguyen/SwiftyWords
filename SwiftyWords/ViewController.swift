@@ -19,7 +19,12 @@ class ViewController: UIViewController {
     // keep track of all the tapped buttons
     var activatedButtons = [UIButton]()
     var solutions = [String]()
-    var score = 0
+    // use property observer to update scoreLabel; note score type must be explicit
+    var score: Int = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     var level = 1
 
     override func viewDidLoad() {
