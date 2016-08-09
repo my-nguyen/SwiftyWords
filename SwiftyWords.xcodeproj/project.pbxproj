@@ -13,6 +13,7 @@
 		0F4EDEC81D58FF54001F261B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EDEC71D58FF54001F261B /* Assets.xcassets */; };
 		0F4EDECB1D58FF54001F261B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F4EDEC91D58FF54001F261B /* LaunchScreen.storyboard */; };
 		0FD4E8191D593E6F00684E50 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FD4E8181D593E6F00684E50 /* level1.txt */; };
+		0FD4E81B1D596BFA00684E50 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FD4E81A1D596BFA00684E50 /* level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0F4EDECA1D58FF54001F261B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F4EDECC1D58FF54001F261B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FD4E8181D593E6F00684E50 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		0FD4E81A1D596BFA00684E50 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				0FD4E8181D593E6F00684E50 /* level1.txt */,
+				0FD4E81A1D596BFA00684E50 /* level2.txt */,
 				0F4EDEC01D58FF54001F261B /* AppDelegate.swift */,
 				0F4EDEC21D58FF54001F261B /* ViewController.swift */,
 				0F4EDEC41D58FF54001F261B /* Main.storyboard */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD4E81B1D596BFA00684E50 /* level2.txt in Resources */,
 				0F4EDECB1D58FF54001F261B /* LaunchScreen.storyboard in Resources */,
 				0FD4E8191D593E6F00684E50 /* level1.txt in Resources */,
 				0F4EDEC81D58FF54001F261B /* Assets.xcassets in Resources */,

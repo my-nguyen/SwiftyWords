@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentAnswer: UITextField!
     @IBOutlet weak var scoreLabel: UILabel!
     var letterButtons = [UIButton]()
+    // keep track of all the tapped buttons
     var activatedButtons = [UIButton]()
     var solutions = [String]()
     var score = 0
@@ -45,9 +46,37 @@ class ViewController: UIViewController {
     }
 
     @IBAction func submitTapped(sender: AnyObject) {
+        // search for currentAnswer in the solutions array
+        if let index = solutions.indexOf(currentAnswer.text!) {
+            activatedButtons.removeAll()
+            // collect all the answers ("7 letters", "8 letters", etc) into an array of strings
+            var answers = answersLabel.text!.componentsSeparatedByString("\n")
+            // replace the answer at index with currentAnswer
+            answers[index] = currentAnswer.text!
+            // join all strings in the answers array back into one long string, then display it in answersLabel
+            answersLabel.text = answers.joinWithSeparator("\n")
+            currentAnswer.text = ""
+            // update score
+            score += 1
+            // all 7 words are solved: prompt user to go to the next level
+            if score % 7 == 0 {
+                let message = "Are you ready for the next level?"
+                let alertController = UIAlertController(title: "Well done!", message: message, preferredStyle: .Alert)
+                alertController.addAction(UIAlertAction(title: "Let's go!", style: .Default, handler: levelUp))
+                presentViewController(alertController, animated: true, completion: nil)
+            }
+        }
     }
 
     @IBAction func clearTapped(sender: AnyObject) {
+        // remove the text from the current answer text field
+        currentAnswer.text = ""
+        for button in activatedButtons {
+            // activate (unhide) all tapped buttons
+            button.hidden = false
+        }
+        // remove all tapped buttons from activatedButtons
+        activatedButtons.removeAll()
     }
 
     func loadLevel() {
@@ -76,7 +105,7 @@ class ViewController: UIViewController {
                     // clue contains "Ghosts in residence"
                     let clue = parts[1]
                     // clueString contains "1. Ghosts in residence"
-                    clueString += "\(index + 1). \(clue)"
+                    clueString += "\(index + 1). \(clue)\n"
                     // convert "HA|UNT|ED" to "HAUNTED"
                     let solutionWord = answer.stringByReplacingOccurrencesOfString("|", withString: "")
                     // solutionString contains "7 letters\n"
@@ -98,6 +127,27 @@ class ViewController: UIViewController {
             for i in 0 ..< letterBits.count {
                 letterButtons[i].setTitle(letterBits[i], forState: .Normal)
             }
+        }
+    }
+
+    func letterTapped(button: UIButton) {
+        // obtain the title label of the tapped button and append it to the current answer text field
+        currentAnswer.text = currentAnswer.text! + button.titleLabel!.text!
+        // save the button in activatedButtons array
+        activatedButtons.append(button)
+        // disable the button
+        button.hidden = true
+    }
+
+    func levelUp(action: UIAlertAction!) {
+        level += 1
+        // clear out solutions array to prepare it for the next level
+        solutions.removeAll(keepCapacity: true)
+        // go up one level
+        loadLevel()
+        // activate all letterButtons
+        for button in letterButtons {
+            button.hidden = false
         }
     }
 }
