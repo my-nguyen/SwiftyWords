@@ -82,9 +82,7 @@ class ViewController: UIViewController {
             let animations = {
                 button.alpha = 1
             }
-            let completion = { (finished: Bool) in
-            }
-            UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: completion)
+            UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: nil)
         }
         // remove all tapped buttons from activatedButtons
         activatedButtons.removeAll()
@@ -151,9 +149,7 @@ class ViewController: UIViewController {
         let animations = {
             button.alpha = 0
         }
-        let completion = { (finished: Bool) in
-        }
-        UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: completion)
+        UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: nil)
     }
 
     func levelUp(action: UIAlertAction!) {
@@ -168,9 +164,7 @@ class ViewController: UIViewController {
             let animations = {
                 button.alpha = 1
             }
-            let completion = { (finished: Bool) in
-            }
-            UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: completion)
+            UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: nil)
         }
     }
 }
