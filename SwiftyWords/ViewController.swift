@@ -78,7 +78,13 @@ class ViewController: UIViewController {
         currentAnswer.text = ""
         for button in activatedButtons {
             // activate (unhide) all tapped buttons
-            button.hidden = false
+            // button.hidden = false
+            let animations = {
+                button.alpha = 1
+            }
+            let completion = { (finished: Bool) in
+            }
+            UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: completion)
         }
         // remove all tapped buttons from activatedButtons
         activatedButtons.removeAll()
@@ -141,7 +147,13 @@ class ViewController: UIViewController {
         // save the button in activatedButtons array
         activatedButtons.append(button)
         // disable the button
-        button.hidden = true
+        // button.hidden = true
+        let animations = {
+            button.alpha = 0
+        }
+        let completion = { (finished: Bool) in
+        }
+        UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: completion)
     }
 
     func levelUp(action: UIAlertAction!) {
@@ -152,7 +164,13 @@ class ViewController: UIViewController {
         loadLevel()
         // activate all letterButtons
         for button in letterButtons {
-            button.hidden = false
+            // button.hidden = false
+            let animations = {
+                button.alpha = 1
+            }
+            let completion = { (finished: Bool) in
+            }
+            UIView.animateWithDuration(1, delay: 0, options: [], animations: animations, completion: completion)
         }
     }
 }
